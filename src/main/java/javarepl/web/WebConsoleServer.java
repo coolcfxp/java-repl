@@ -16,14 +16,15 @@ import static javarepl.Utils.randomServerPort;
 
 public class WebConsoleServer {
 
-    public static void main(String... args) throws Exception {
-        ServerConfiguration configuration = defaultConfiguration().port(port(args).getOrElse(randomServerPort()));
-        WebConsoleApplication application = new WebConsoleApplication(basePath("/"));
-        new RestServer(application, configuration);
+  public static void main(String... args) throws Exception {
+    ServerConfiguration configuration = defaultConfiguration().port(port(args).getOrElse(randomServerPort()));
+    WebConsoleApplication application = new WebConsoleApplication(basePath("/"));
+    new RestServer(application, configuration);
 
-    }
+  }
 
-    private static Option<Integer> port(String[] args) {
-        return sequence(args).find(startsWith("--port=")).map(compose(replaceAll("--port=", ""), compose(valueOf, intValue)));
-    }
+  private static Option<Integer> port(String[] args) {
+    return sequence(args).find(startsWith("--port="))
+            .map(compose(replaceAll("--port=", ""), compose(valueOf, intValue)));
+  }
 }

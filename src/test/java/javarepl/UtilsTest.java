@@ -15,6 +15,7 @@ import static java.util.Arrays.asList;
 import static javarepl.Utils.*;
 import static junit.framework.Assert.assertTrue;
 import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.Assert.*;
 
 public class UtilsTest {

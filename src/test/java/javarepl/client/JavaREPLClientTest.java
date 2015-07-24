@@ -17,9 +17,9 @@ import static javarepl.client.EvaluationLog.Type.SUCCESS;
 import static javarepl.completion.CompletionCandidate.functions.candidateValue;
 import static javarepl.console.ConsoleStatus.Running;
 import static javarepl.rendering.ExpressionTokenRenderer.EXPRESSION_TOKEN;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class JavaREPLClientTest {
 
